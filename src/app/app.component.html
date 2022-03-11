@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 left-panel">
+      <h4 class="primary-color">REVIEW YOUR APPLICATION</h4>
+      <h1 class="primary-color">Confirm your contact details</h1>
+      <h4 class="touch">We'll use these details if we need to get in touch about your coverage</h4>
+    </div>
+    <div class="col-md-6 form-div">
+      <h3 class="primary-color">Your contact info</h3>
+      <form [formGroup]="form" class="top-spacing" (ngSubmit)="saveDetails()">
+        <div class="row">
+          <div class="col-md-6">
+            <mat-form-field appearance="fill">
+              <mat-label>First Name</mat-label>
+              <input matInput formControlName="firstName">
+              <mat-error>This field is required</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-md-6">
+            <mat-form-field appearance="fill">
+              <mat-label>Last Name</mat-label>
+              <input matInput formControlName="lastName">
+              <mat-error>This field is required</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <mat-form-field appearance="fill">
+            <mat-label>Email Address</mat-label>
+            <input matInput formControlName="email">
+            <mat-error>This field is required</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field appearance="fill">
+            <mat-label>Phone Number</mat-label>
+            <input matInput formControlName="phoneNumber" prefix="+1" mask="(000) 000-000">
+            <mat-error>This field is required</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div mat-dialog-actions class="pull-right">
+          <button mat-raised-button color="primary">Next</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div *ngIf="showFormValues" class="details">
+    <p>First name: {{form.value.firstName}}</p>
+    <p>Last name: {{form.value.lastName}}</p>
+    <p>Email address: {{form.value.email}}</p>
+    <p>Phone number: +1 {{form.value.phoneNumber |mask:'(000) 000-000'}}</p>
+  </div>
+</div>

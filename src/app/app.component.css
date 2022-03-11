@@ -1,0 +1,50 @@
+.mat-form-field{
+    width: 100% !important;
+}
+
+.container{
+    padding-top: 100px !important;
+}
+.row{
+    margin-bottom: 10px !important;
+}
+
+.touch{
+    width: 280px;
+}
+
+h1{
+    font-size: 40px !important; 
+    width: 265px !important;
+    line-height: 45px !important;
+}
+
+.details{
+    color: red;
+}
+
+.form-div{
+    background: rgba(0,0,0,.04);
+    min-height: 400px;
+    padding:20px;
+}
+
+.left-panel{
+    min-height: 400px;
+    padding-top: 100px;
+}
+.top-spacing{
+    margin-top: 50px;
+}
+
+.primary-color{
+    color: #0275d8;
+}
+
+.pull-right{
+    float: right;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex{
+    background-color: #fff !important;
+}
